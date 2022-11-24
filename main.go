@@ -14,6 +14,7 @@ func main() {
 	println("scanning...")
 	err := adapter.Scan(func(adapter *bluetooth.Adapter, device bluetooth.ScanResult) {
 		println("found device:", device.Address.String(), device.RSSI, device.LocalName())
+		println("beres scan")
 	})
 	must("start scan", err)
 }
